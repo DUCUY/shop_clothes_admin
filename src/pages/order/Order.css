@@ -1,0 +1,33 @@
+.order{
+    flex: 5;
+}
+.orderDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    
+}
+
+.orderDetail{
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+
+.orderDetails-List{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}   
+
+.orderDetails-List img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover; 
+    border: 1px solid black;
+  }
+
+.orderDetails-Item{
+    margin-left: 20px;
+}

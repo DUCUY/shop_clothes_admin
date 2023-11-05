@@ -7,11 +7,19 @@ const currentUser = user && JSON.parse(user).currentUser;
 const TOKEN = currentUser?.accessToken;
 
 export const publicRequest = axios.create({
-    baseURL: BASE_URL,
-  });
+  baseURL: BASE_URL,
+});
 
 export const userRequest = axios.create({
-    baseURL: BASE_URL,
-    headers: { token: `Bearer ${TOKEN}` },
-  });
+  baseURL: BASE_URL,
+  headers: {
+    "Content-Type": "application/json",
+    'token': `Bearer ${TOKEN}`
+
+  },
+});
+
+
+
+// token: `Bearer ${TOKEN}`,
 

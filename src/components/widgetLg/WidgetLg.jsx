@@ -12,7 +12,8 @@ export default function WidgetLg() {
     const getOrders = async () => {
       try {
         const res = await userRequest.get("orders");
-        setOrders(res.data);
+        const latestOrders = res.data.slice(0, 5);
+        setOrders(latestOrders);
       } catch (err) {
         return err;
       }
@@ -38,7 +39,7 @@ export default function WidgetLg() {
 
           <tr className="widgetLgTr" key={order._id}>
           <td className="widgetLgUser">
-            <span className="widgetLgName">{order.userId}</span>
+            <span className="widgetLgName">{order.username}</span>
           </td>
           <td className="widgetLgDate">{order.createdAt}</td>
           <td className="widgetLgAmount">{formatVND(order.amount)}</td>

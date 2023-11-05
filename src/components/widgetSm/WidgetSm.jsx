@@ -9,10 +9,9 @@ export default function WidgetSm() {
   useEffect(() => {
     const getUsers = async () => {
       try {
-
         const res = await userRequest.get("users/?new=true");
         setUsers(res.data);
-      } catch (error){
+      } catch (error) {
 
       }
     };
@@ -26,21 +25,21 @@ export default function WidgetSm() {
       <ul className="widgetSmList">
         {users.map(user => (
           <li className="widgetSmListItem" key={user._id}>
-          <img
-            src="https://crowd-literature.eu/wp-content/uploads/2015/01/no-avatar.gif"
-            alt=""
-            className="widgetSmImg"
+            <img
+              src="https://crowd-literature.eu/wp-content/uploads/2015/01/no-avatar.gif"
+              alt=""
+              className="widgetSmImg"
             />
-          <div className="widgetSmUser">
-            <span className="widgetSmUsername">{user.username}</span>
-            {/* <span className="widgetSmUserTitle">Software Engineer</span> */}
-          </div>
-          <button className="widgetSmButton">
-            <Visibility className="widgetSmIcon" />
-            Xem
-          </button>
-        </li>
-          ))}
+            <div className="widgetSmUser">
+              <span className="widgetSmUsername">{user.username}</span>
+              {/* <span className="widgetSmUserTitle">Software Engineer</span> */}
+            </div>
+            <button className="widgetSmButton">
+              <Visibility className="widgetSmIcon" />
+              Xem
+            </button>
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-// import { login } from "../../redux/apiCall";
 import { useHistory } from "react-router-dom"
 import { publicRequest } from "../../requestMethods";
 import { loginSuccess } from "../../redux/userRedux";
 import "./login.css"
+import toast from "react-hot-toast";
 
 
 const Login = () => {
@@ -20,6 +20,7 @@ const Login = () => {
       dispatch(loginSuccess(res.data));
       if (res.data) {
         next.push('/');
+        toast.success("Đăng nhập thành công.");
       }
     }
     api();

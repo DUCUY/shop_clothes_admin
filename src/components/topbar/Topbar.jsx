@@ -1,6 +1,6 @@
 import React from "react";
 import "./topbar.css";
-import { NotificationsNone, Language, Settings, AccountCircle } from "@material-ui/icons";
+import { NotificationsNone, AccountCircle } from "@material-ui/icons";
 
 export default function Topbar() {
   return (
